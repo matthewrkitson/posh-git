@@ -6,6 +6,7 @@ Push-Location $psScriptRoot
 . .\Utils.ps1
 . .\GitUtils.ps1
 . .\GitPrompt.ps1
+. .\GitPromptAsync.ps1
 . .\GitTabExpansion.ps1
 . .\TortoiseGit.ps1
 Pop-Location
@@ -23,7 +24,12 @@ Export-ModuleMember `
         'Invoke-NullCoalescing',
         'Write-GitStatus',
         'Write-Prompt',
-        'Get-GitStatus', 
+        'Get-GitStatus',
+        'Start-GitPrompt',
+        'Update-GitPromptRepositories',
+        'Publish-GitPromptRepositoryUpdated',
+        'Stop-GitPrompt',
+        'Get-GitPromptStatus',
         'Enable-GitColors', 
         'Get-GitDirectory',
         'TabExpansion',
@@ -35,5 +41,4 @@ Export-ModuleMember `
         'Get-SshPath',
         'Update-AllBranches',
         'tgit')
-
 
